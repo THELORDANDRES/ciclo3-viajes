@@ -4,25 +4,34 @@
 <head>
     <meta charset="utf-8">
     <title>Proyecto</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <nav class="barraContenedor">
-    	<a href="index.html"><img src=" " class="logo"></a>
+    <nav id="navegacion" class="barraContenedor">
     	<div class="barraMenuContenedor">
     		<ul class="barraMenu">
+				<li>
+					<a href="index.html">
+						<img  id="logo" src="img/logo.png" class="logo" width="70" height="60"/>
+					</a>
+				</li>
     			<li>
     				<a class="itemMenu active" href="index.html">Inicio</a>
     			</li>
     			<li>
     				<a class="itemMenu" href="#">Nosotros</a>
     			</li>
+				<li>
+					<button id="btn_registroDeUsuarios">
+						<a id="a_registroDeUsuarios" href="registro.html">Registrarse</a>
+					</button>
+				</li>
     		</ul>
     	</div>
     </nav>    
-    	<section>
-    		<div class="contenedorContenido" style="">
-    			<h1 class="font-weight-bold title">Explore</h1>
+    	<section class="info">
+    		<div class="contenedorContenido">
+    			<h1>Explore</h1>
     		</div>
     		<div class="contenedorContenido contenedorHijo">
     			<div class="contenedorDescripcion">

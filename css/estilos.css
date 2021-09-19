@@ -1,50 +1,120 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+:root {
     --colorTextos: #49454567;
 }
 
-*,
-::before,
-::after{
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Roboto';
-    background: #373B44;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4286f4, #fa9813);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4286f4, #fa9813); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #373B44;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #fa9813);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #fa9813);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*CSS index.html inicio */
+
+nav ul {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #063a8d;
+}
+
+.barraMenu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.barraMenu a:hover {
+    color: #333;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    align-items: center;
+    background-color: #4286f4;
+    padding: .7rem;
+    border-radius: .5rem;
+    transition: all 500ms ease-in-out;
+    box-shadow: 3px 3px 16px #384437;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+    background-color: #fa9813;
+}
+
+nav li:nth-child(1) {
+    background-color: transparent;
+    transition: all 500ms ease-in-out;
+    box-shadow: none;
+}
+
+nav li:nth-child(1):hover {
+    transform: scale(1.2);
+}
+
+#btn_registroDeUsuarios {
+    border: none;
+    background-color: transparent;
+    font-size: 1.05em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem 4rem 0 4rem;
+}
+
+/*CSS index.html final*/
+
+.registro {
     height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#anoNacimiento_usuario{
+
+#anoNacimiento_usuario {
     width: 220px;
 }
-h1{
+
+h1 {
     text-align: center;
     font-weight: 700;
 }
 
-form{
-    background:white;
+form {
+    background: white;
     padding: 40px 0;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    
 }
-.from{
+
+.from {
     width: 100%;
     margin: auto;
 }
 
-form .group{
+form .group {
     position: relative;
     margin: 45px;
 }
 
-input{
+input {
     background: none;
     color: #c6c6c6;
     font-size: 18px;
@@ -54,11 +124,12 @@ input{
     border-bottom: 1px solid var(--colorTextos);
 }
 
-input:focus{
+input:focus {
     outline: none;
     color: #5e5d5d;
 }
-label{
+
+label {
     color: var(--colorTextos);
     font-size: 16px;
     position: absolute;
@@ -68,19 +139,19 @@ label{
     pointer-events: none;
 }
 
-input:focus~label,
-input:valid~label{
+input:focus~label, input:valid~label {
     top: -14px;
     font-size: 12px;
     color: #4286f4;
 }
 
-.barra{
+.barra {
     position: relative;
     display: block;
     width: 100%;
 }
-.barra::before{
+
+.barra::before {
     content: "";
     height: 2px;
     width: 0%;
@@ -90,14 +161,19 @@ input:valid~label{
     transition: 0.3s ease width;
     left: 0;
 }
-input:focus~.barra::before{
+
+input:focus~.barra::before {
     width: 100%;
 }
-button{
+
+#enviar_registro {
     font-family: 'Roboto';
-    background: #373B44;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4286f4, #fa9813);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4286f4, #fa9813); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #373B44;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #fa9813);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #fa9813);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: none;
     display: block;
     width: 80%;
@@ -110,8 +186,7 @@ button{
 }
 
 @media screen and (max-width:50px) {
-    form{
+    form {
         width: 80%;
     }
-    
 }
