@@ -2,7 +2,15 @@ function validar_nombre_usuario(){
 
 }
 
-function validar_anoNacimiento_usuario(){
+function validar_anoNacimiento_usuario(valor){
+    if(typeof(valor) == "number"){
+        if(valor > 0){
+            if(valor >= 1990 && valor <= 2022){
+                return true;
+            }
+        }
+    }
+    return false;
 
 }
 
