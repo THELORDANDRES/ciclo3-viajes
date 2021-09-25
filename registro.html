@@ -14,25 +14,26 @@
       <div id="from">
           <h1>Registro</h1>
           <div class="group">
-            <input id="nombre_usuario" type="text" required><span class="barra"></span> 
+            <input id="nombre_usuario" type="text"><span class="barra"></span> 
             <label for="nombre_usuario">Nombre </label>  
           </div>
 
           <div class="group">
-            <input id="anoNacimiento_usuario" type="number" min="1900" max="2021" required><span class="barra"></span>
+            <input id="anoNacimiento_usuario" type="number" min="1900" max="2021"><span class="barra"></span>
             <label for="anoNacimiento_usuario">Año de Nacimiento </label>
           </div>
 
           <div class="group">
-            <input id="contrasena_usuario" type="password" required><span class="barra"></span>
+            <input id="contrasena_usuario" type="password"><span class="barra"></span>
             <label for="contrasena_usuario">Contraseña </label>
           </div>
 
-          <button id="enviar_registro">
-            Registrar
-          </button>
+          <button onclick="validar_nombre_usuario();"  id="enviar_registro">Registrar</button>
+
       </div>
     </form>
     <script src="js/validaciones.js"></script>
   </body>
+
+  <!-- /^[0-9a-zA-Z]+$/ nos valida clave -->
 </html>
