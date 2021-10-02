@@ -1,29 +1,23 @@
-function validar_nombre_usuario(){
-    
-    const nombre = document.getElementById('nombre_usuario').value;
+var registros = [];
+var person;
 
-
+function validar_nombre_usuario(String) {
     var exp = /^[A-Z][a-z]+$/;
-    
-    if (nombre == null || nombre.length == 0){
-        alert('El nombre no puede estar vacio\nDebe de empezar con una letra en mayuscula');
-    
+    const nombre = document.getElementById('nombre_usuario').value;
+    if (exp.test(nombre)) {
+        console.log('true');
+        return true;
     }
-    else if(nombre.length>30){
-        alert('El nombre es muy largo\nDebe de tener máximo 10 letras');
-    
+    else {
+        console.log('false');
+        return false;
     }
-    else if(exp.test(nombre)==false){
-        alert('El nombre no es valido\nDebe de empezar por una letra en mayuscula');
-    
-    }
-    
 }
 
-function validar_anoNacimiento_usuario(valor){
-    if(typeof(valor) == "number"){
-        if(valor > 0){
-            if(valor >= 1990 && valor <= 2022){
+function validar_anoNacimiento_usuario(valor) {
+    if (typeof (valor) == "number") {
+        if (valor > 0) {
+            if (valor >= 1990 && valor <= 2022) {
                 return true;
             }
         }
@@ -32,18 +26,42 @@ function validar_anoNacimiento_usuario(valor){
 
 }
 
-function validar_contrasena(){
-    var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+function validar_contrasena() {
+    const re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
     let password = document.getElementById('contrasena_usuario').value;
-    if(re.test(password)){
+    if (re.test(password)) {
         return true;
-    }else {
+    } else {
         return false;
     }
 }
 
+function agregarRegistro() {
+    let name = document.getElementById('nombre_usuario').value;
+    let yearBirthday = document.getElementById('anoNacimiento_usuario').value;
+    let password = document.getElementById('contrasena_usuario').value;
 
+    person = {
+        "usuario": name,
+        "anoNacimiento": yearBirthday,
+        "contrasena": password
+    }
+
+    registros.push(person);
+    console.log(registros.toString())
+
+    document.getElementById('nombre_usuario').value="";
+    document.getElementById('anoNacimiento_usuario').value="";
+    document.getElementById('contrasena_usuario').value="";
+}
+
+function EncontrarUsuarioPorEdad() {
+    //implementación
+}
+
+module.exports.registros = registros;
+module.exports.EncontrarUsuarioPorEdad = EncontrarUsuarioPorEdad;
+module.exports.agregarRegistro = agregarRegistro;
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
 module.exports.validar_anoNacimiento_usuario = validar_anoNacimiento_usuario;
-
