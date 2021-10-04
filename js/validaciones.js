@@ -56,7 +56,7 @@ function agregarRegistro() {
 }
 
 function EncontrarUsuarioPorEdad() {
-    //implementación
+    console.log("HOLA HOla chamaco");
 }
 
 module.exports.registros = registros;
