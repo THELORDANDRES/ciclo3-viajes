@@ -53,10 +53,25 @@ function agregarRegistro() {
     document.getElementById('nombre_usuario').value="";
     document.getElementById('anoNacimiento_usuario').value="";
     document.getElementById('contrasena_usuario').value="";
+    return registros;
 }
 
-function EncontrarUsuarioPorEdad() {
-    console.log("HOLA HOla chamaco");
+function EncontrarUsuarioPorEdad(registros) {
+    agregarRegistro();
+    
+    var fechaMayor=0;
+    for(var i=0;i<registros.length;i++)
+    {
+        
+        if(fechaMayor<=parseInt(registros[i][1]))
+        {
+            fechaMayor=parseInt(registros[i][1]);
+            var nombre=i;
+        }        
+    
+        
+    }
+    console.log(fechaMayor,nombre);
 }
 
 module.exports.registros = registros;
