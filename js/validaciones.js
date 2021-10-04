@@ -61,17 +61,13 @@ function EncontrarUsuarioPorEdad(registros) {
     
     var fechaMayor=0;
     for(var i=0;i<registros.length;i++)
-    {
-        
+    {        
         if(fechaMayor<=parseInt(registros[i][1]))
         {
-            fechaMayor=parseInt(registros[i][1]);
-            var nombre=i;
+            fechaMayor=parseInt(registros[i][1]);            
         }        
-    
-        
     }
-    console.log(fechaMayor,nombre);
+    console.log(fechaMayor);
 }
 
 module.exports.registros = registros;
