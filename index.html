@@ -1,47 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="css/glider css/glider.css" />
+    <link rel="stylesheet" href="css/estiloIndex.css" />
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<title>Proyecto</title>
-	<link rel="stylesheet" href="css/estilos.css">
-</head>
+  <body>
+    <nav id="navegacion" class="barraContenedor">
+      <div class="barraMenuContenedor">
+        <a href="index.html">
+          <img
+            id="logo"
+            src="img/logo.png"
+            class="logo"
+            width="70"
+            height="60"
+          />
+        </a>
+        <label for="menu" class="nav_label">
+          <img src="assets/menu.svg" alt="icono del menu" class="nav_icon" />
+        </label>
+        <input type="checkbox" id="menu" class="nav_input" />
+        <div class="nav_menu">
+          <a class="nav_item" href="#">Inicio</a>
+          <a class="nav_item" href="#">Paquetes</a>
+          <a class="nav_item" href="#">Login</a>
+          <a class="nav_item" id="a_registroDeUsuarios" href="registro.html"
+            >Registrarse</a
+          >
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="header">
+        <div class="carousel">
+          <div class="carousel__contenedor">
+            <div class="carousel__lista">
+              <div class="carousel__elementos">
+                <img src="img/carousel/img1.jpg" alt="imagen 1" />
+              </div>
+              <div class="carousel__elementos">
+                <img src="img/carousel/img2.jpg" alt="imagen 2" />
+              </div>
+              <div class="carousel__elementos">
+                <img src="img/carousel/img3.jpg" alt="imagen 3" />
+              </div>
+            </div>
+            <button aria-label="Anterior" class="carousel__anterior">
+              <i class="fas fa-chevron-left fa-2x"></i>
+            </button>
 
-<body>
-	<nav id="navegacion" class="barraContenedor">
-		<div class="barraMenuContenedor">
-			<ul class="barraMenu">
-				<li>
-					<a href="index.html">
-						<img id="logo" src="img/logo.png" class="logo" width="70" height="60" />
-					</a>
-				</li>
-				<li>
-					<a class="itemMenu active" href="index.html">Inicio</a>
-				</li>
-				<li>
-					<a class="itemMenu" href="#">Nosotros</a>
-				</li>
-				<li>
-					<button id="btn_registroDeUsuarios">
-					<a id="a_registroDeUsuarios" href="registro.html">Registrarse</a>
-					</button>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<section class="info">
-		<div class="contenedorContenido">
-			<h1>Explore</h1>
-		</div>
-		<div class="contenedorContenido contenedorHijo">
-			<div class="contenedorDescripcion">
-				<p>Bienvenido, aqui podra encontrar las mejores recomendaciones para sus viajes, tenemos destinos en los
-					5 continentes con las mejores recomendaciones en paquetes, los mejores precios en hoteleria,
-					tiquetes y restaurantes </p>
-			</div>
-		</div>
-	</section>
-</body>
+            <button aria-label="Siguiente" class="carousel__siguiente">
+              <i class="fas fa-chevron-right fa-2x"></i>
+            </button>
+          </div>
+          <div role="tablist" class="carousel__indicadores"></div>
+        </div>
+        <div class="descripcion">
+          <div class="contenedorTitulo">
+            <h1>Explore</h1>
+          </div>
+          <div class="contenedorDescripcion">
+            <p>
+              Bienvenido, aqui podra encontrar las mejores recomendaciones para
+              sus viajes, tenemos destinos en los 5 continentes con las mejores
+              recomendaciones en paquetes, los mejores precios en hoteleria,
+              tiquetes y restaurantes
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container">
+      <div class="card">
+        <img src="img/card/Santa-marta.png" alt="Santa Marta" />
+        <h4>Santa marta</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
+          explicabo quidem. Atque, placeat? Molestias in nostrum pariatur hic
+          obcaecati ea, eligendi perferendis voluptatem quod, quam optio nulla
+          earum, maiores eum?
+        </p>
+        <a href="#">Leer mas</a>
+      </div>
+      <div class="card">
+        <img src="img/card/francia.jpg" alt="Francia" />
+        <h4>Francia</h4>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+          sapiente pariatur voluptas fugit obcaecati eaque ab dolorem eligendi
+          quas cum magnam a dolore, unde perferendis quod enim delectus
+          assumenda repellat!
+        </p>
+        <a href="#">Leer mas</a>
+      </div>
+      <div class="card">
+        <img src="img/card/machu-picchu.jpg" alt="machu picchu" />
+        <h4>Machu pichu</h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur,
+          iure! Modi, dolorum vel et corrupti enim minima quam rerum minus dolor
+          facilis possimus consectetur numquam ipsum explicabo quasi quis
+          pariatur.
+        </p>
+        <a href="#">Leer mas</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <h4 class="footer__a">Derechos de autor reservados</h4>
+      <i class="fas fa-at footer_i fa-2x"></i>
+    </footer>
 
+    <script src="js/glider.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4b10027f4e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/carousel.js"></script>
+  </body>
 </html>
