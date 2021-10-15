@@ -1,4 +1,5 @@
 var registros = [];
+var arreglo=[];
 var person;
 
 function validar_nombre_usuario(String) {
@@ -56,18 +57,23 @@ function agregarRegistro() {
     return registros;
 }
 
-function EncontrarUsuarioPorEdad(registros) {
-    agregarRegistro();
+
+function EncontrarUsuarioPorEdad() {
+   var arreglo=arreglo || [];
+    arreglo=agregarRegistro();
+    
+    //console.log(arreglo[1][2]);
     
     var fechaMayor=0;
-    for(var i=0;i<registros.length;i++)
+    for(var i=0;i<arreglo.length;i++)
     {        
-        if(fechaMayor<=parseInt(registros[i][1]))
+        if(fechaMayor<=parseInt(arreglo[i][1]))
         {
-            fechaMayor=parseInt(registros[i][1]);            
+            fechaMayor=parseInt(arreglo[i][1]); 
+            var usuario=arreglo[i];
         }        
     }
-    console.log(fechaMayor);
+    console.log(usuario);
 }
 
 module.exports.registros = registros;
