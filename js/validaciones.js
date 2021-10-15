@@ -1,5 +1,5 @@
 var registros = [];
-var arreglo=[];
+//var arreglo=[];
 var person;
 
 function validar_nombre_usuario(String) {
@@ -51,29 +51,29 @@ function agregarRegistro() {
     registros.push(person);
     console.log(registros.toString())
 
-    document.getElementById('nombre_usuario').value="";
-    document.getElementById('anoNacimiento_usuario').value="";
-    document.getElementById('contrasena_usuario').value="";
+    document.getElementById('nombre_usuario').value = "";
+    document.getElementById('anoNacimiento_usuario').value = "";
+    document.getElementById('contrasena_usuario').value = "";
     return registros;
 }
 
 
-function EncontrarUsuarioPorEdad() {
-   var arreglo=arreglo || [];
-    arreglo=agregarRegistro();
-    
+function EncontrarUsuarioPorEdad(arreglo) {
+
+    //var arreglo = arreglo || [];
+    arreglo = agregarRegistro();
     //console.log(arreglo[1][2]);
-    
-    var fechaMayor=0;
-    for(var i=0;i<arreglo.length;i++)
-    {        
-        if(fechaMayor<=parseInt(arreglo[i][1]))
-        {
-            fechaMayor=parseInt(arreglo[i][1]); 
-            var usuario=arreglo[i];
-        }        
+
+    var fechaMayor = 0;
+    var usuario = [];
+    for (var i = 0; i < arreglo.length; i++) {
+        if (fechaMayor <= parseInt(arreglo[i][1])) {
+            fechaMayor = parseInt(arreglo[i][1]);
+            usuario = arreglo[i];
+        }
     }
     console.log(usuario);
+    return usuario;
 }
 
 module.exports.registros = registros;
