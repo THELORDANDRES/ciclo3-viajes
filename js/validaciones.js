@@ -57,17 +57,22 @@ function agregarRegistro() {
 }
 
 function EncontrarUsuarioPorEdad(registros) {
-    agregarRegistro();
-    
-    var fechaMayor=0;
-    for(var i=0;i<registros.length;i++)
+  
+    var puntero=0
+    var fechaMayor=registros[0].anoNacimiento;
+    for(var i=1;i<registros.length;i++)
     {        
-        if(fechaMayor<=parseInt(registros[i][1]))
-        {
-            fechaMayor=parseInt(registros[i][1]);            
+        if(fechaMayor>=registros[i].anoNacimiento)
+        {   
+            
+            puntero=i
+            fechaMayor=registros[i].anoNacimiento;            
+        }else{
+           
         }        
     }
-    console.log(fechaMayor);
+    console.log(registros[puntero]);
+    return(registros[puntero]);
 }
 
 module.exports.registros = registros;
