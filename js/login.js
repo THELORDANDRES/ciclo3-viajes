@@ -1,8 +1,8 @@
-let registros = [];
+var registros = [];
 
 function validar_captcha(rcaptcha) {
-    rcaptcha = document.getElementById('login_captcha').value;
-    if (parseInt(rcaptcha, 10) === 16) {
+    //rcaptcha = document.getElementById('login_captcha').value;
+    if (rcaptcha == 16) {
         return true;
     } else {
         return false;
@@ -10,7 +10,13 @@ function validar_captcha(rcaptcha) {
 }
 
 function iniciar_sesion(usuario, contrasena, rcaptcha) {
-    //implementacion
+    for(i=0;i<registros.length;i++){
+        if(usuario==registros[i].usuario && contrasena==registros[i].contrasena && validar_captcha(rcaptcha)==true){
+            return true;
+        }
+    }
+    return false;
+    
 }
 
 module.exports.registros = registros;
